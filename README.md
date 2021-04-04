@@ -13,6 +13,7 @@ pip3 install selenium
 ```
 choco install chromedriver
 ```
+**OPTIONAL : VPN (but i recommend to)**
 
 ## Usage
 
