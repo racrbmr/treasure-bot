@@ -10,30 +10,31 @@ print("")
 print("--- Treasure Referral BOT ---")
 print("")
 
-before = int(input("berapakah storage kamu sekarang?(GB): "))
-how_many = int(input("ingin nambah berapa kali?: "))
+before = int(input("how much is ur storage now?(GB): "))
+print(" 1x process = 10 GB")
+how_many = int(input("how many process do u want?: "))
 
 if how_many <= 0:
-    print("Gak bisa, Minimal harus 1x")
+    print(" Nope, minimum 1x process")
     exit()
 else:
     pass
 
 print("")
-print("bot ini akan mengulang proses selama", how_many, "kali atau penambahan storage", how_many * 10, "GB")
-print("---- sangat disarankan tidak lebih dari 5x -----")
+print("The bot will repeat the process for", how_many, "time(s) or increase in storage of", how_many * 10, "GB")
+print("---- it is recommended to not go over 5x -----")
 time.sleep(3)
 
 after = how_many * 10
-treasure = input("Input link referral treasure kamu: ")
+treasure = input("Input ur treasure ref link: ")
 
 def auto():
     delay = time.sleep
     driver_1 = webdriver.Chrome(ChromeDriverManager().install())
     driver_2 = webdriver.Chrome(ChromeDriverManager().install())
     print("")
-    print("sekarang chill aja, gausa gegabah otak atik. ok?")
-    print("estimasi 1x proses = 5 menit")
+    print("now get chill, don't u dare push/press anything. ok?")
+    print("1x process estimated for 5 minutes")
     print("")
     delay(5)
 
@@ -55,9 +56,12 @@ def auto():
     driver_1.maximize_window()
     driver_2.maximize_window()
     delay(4)
+    print("Maximizing Window...")
+    delay(2)
 
     generate_email = driver_2.find_element_by_xpath('//*[@id="Login"]/div/form/table/tbody/tr[1]/td[2]/a/img').click()
     delay(1)
+    print("getting tempr email cred")
     go = driver_2.find_element_by_xpath('//*[@id="Login"]/div/form/table/tbody/tr[4]/td[2]/input').click()
     delay(4)
     copy_email = driver_2.find_element_by_xpath('//*[@id="InboxWrapper"]/div[1]/strong[1]').text
@@ -68,11 +72,12 @@ def auto():
     delay(2)
 
     driver_1.find_element_by_xpath('//*[@id="signup-button"]').click()
+    print("registering...")
+    delay(2)
     print("")
-    print("sabar ya bosquu, lagi nunggu email masuk")
+    print("patient ya bosquu, waiting for the email")
     delay(150)
 
-    
 
     driver_2.find_element_by_xpath('//*[@id="MenuInbox"]/div/nav/ul/li[1]/a').click()
     delay(5)
@@ -86,16 +91,20 @@ def auto():
 
     link = driver_2.find_element_by_xpath('//*[@id="MessageContent"]/div/a').text
     delay(6)
+    print("get the link")
 
-
+    print("opening the link")
     driver_1.get(link)
 
     #name
     driver_1.find_element_by_xpath('//*[@id="mat-input-1"]').send_keys(group)
+    print("some name...")
     delay(7)
+    
 
     #passwd
     driver_1.find_element_by_xpath('//*[@id="mat-input-2"]').send_keys(pass_grp)
+    print("some password...")
     delay(7)
 
     #confir-passwd
@@ -108,6 +117,7 @@ def auto():
 
     #continu
     driver_1.find_element_by_xpath('//*[@id="continue-button"]').click()
+    print("finishing...")
     delay(7)
 
     #yes_continue
@@ -117,12 +127,12 @@ def auto():
     #finish
     driver_1.find_element_by_xpath('//*[@id="finish-button"]').click()
     print("")
-    print("iya ini sudah selesai, lagi nungguin loading kalo internet lu kek siput")
-    delay(25)
+    print("COMPLETED! just wait a bit ok, in case ur internet is like a snail")
+    delay(20)
 
     driver_1.quit()
     driver_2.quit()
-    #selesai sampe sini
+    #done
 
 
 if how_many == 1:
