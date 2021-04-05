@@ -25,11 +25,10 @@ print("---- sangat disarankan tidak lebih dari 5x -----")
 time.sleep(3)
 
 after = how_many * 10
-
+treasure = input("Input link referral treasure kamu: ")
 
 def auto():
     delay = time.sleep
-    treasure = input("Input link referral treasure kamu: ")
     driver_1 = webdriver.Chrome(ChromeDriverManager().install())
     driver_2 = webdriver.Chrome(ChromeDriverManager().install())
     print("")
