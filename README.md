@@ -21,4 +21,6 @@ choco install chromedriver
 cd treasure-bot-main
 python3 the_auto.py
 ```
+
+## other
     This information is only for educational purpose and I am not responsible for any kind of illegal activity done by this tool.
