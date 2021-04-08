@@ -75,7 +75,7 @@ def auto():
     delay(5)
     print("")
     print("patient ya bosquu, waiting for the email")
-    delay(10)
+    delay(25)
 
     driver_2.find_element_by_xpath('//*[@id="refresh"]/div').click()
     link = driver_2.find_element_by_xpath('//*[@id="hs_cos_wrapper_module_16158863191553_"]/p[1]/span/strong').text
