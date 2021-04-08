@@ -13,6 +13,7 @@ pip3 install selenium
 ```
 choco install chromedriver
 ```
+Good and stable internet connection.
 **OPTIONAL : VPN (but i recommend to)**
 
 ## Usage
@@ -23,4 +24,5 @@ python3 the_auto.py
 ```
 
 ## other
-    This information is only for educational purpose and I am not responsible for any kind of illegal activity done by this tool.
+  
+```This information is only for educational purpose and I am not responsible for any kind of illegal activity done by this tool.```
