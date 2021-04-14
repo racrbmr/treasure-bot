@@ -10,7 +10,7 @@ print("")
 print("--- Treasure Referral BOT ---")
 print("")
 
-before = int(input("how much is ur storage now?(GB): "))
+before = int(input("how much is ur total storage now?(GB): "))
 print(" 1x process = 10 GB")
 how_many = int(input("how many process do u want?: "))
 
@@ -75,15 +75,15 @@ def auto():
     delay(5)
     print("")
     print("patient ya bosquu, waiting for the email")
-    delay(25)
+    delay(40)
 
     driver_2.find_element_by_xpath('//*[@id="refresh"]/div').click()
     link = driver_2.find_element_by_xpath('//*[@id="hs_cos_wrapper_module_16158863191553_"]/p[1]/span/strong').text
-    delay(5)
+    delay(7)
     print("get the activation code.")
     
     print("inputting the code")
-    delay(1)
+    delay(2)
     driver_1.find_element_by_xpath('//*[@id="verify-code-form"]/div[1]/div[1]/input').send_keys(link)
     delay(7)
     
