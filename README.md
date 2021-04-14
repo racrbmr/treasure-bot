@@ -8,8 +8,7 @@ Chrome browser : https://www.google.com/chrome/
 Python : https://www.python.org/downloads/
 
 ```
-pip3 install selenium
-pip3 install webdriver_manager
+pip3 install -r requirements.txt
 ```
 ```
 choco install chromedriver
