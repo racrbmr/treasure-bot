@@ -10,9 +10,6 @@ Python : https://www.python.org/downloads/
 ```
 pip3 install -r requirements.txt
 ```
-```
-choco install chromedriver
-```
 Good and stable internet connection.
 **OPTIONAL : VPN (but i recommend to)**
 
