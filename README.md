@@ -8,7 +8,7 @@ Chrome browser : https://www.google.com/chrome/
 Python : https://www.python.org/downloads/
 
 ```
-pip3 install -r requirements.txt
+pip install -r requirements.txt
 ```
 Good and stable internet connection.
 **OPTIONAL : VPN (but i recommend to)**
@@ -17,7 +17,7 @@ Good and stable internet connection.
 
 ```
 cd treasure-bot-main
-python3 the_auto.py
+python the_auto.py
 ```
 
 ## other
