@@ -69,10 +69,34 @@ def auto():
     driver_1.find_element_by_xpath('//*[@id="mat-input-0"]').send_keys(Keys.CONTROL, "v")
     delay(2)
     
-        
-    driver_1.find_element_by_xpath('//*[@id="signup-button"]').click()
+    #name
+    driver_1.find_element_by_xpath('//*[@id="mat-input-1"]').send_keys(the_name)
+    print("some name...")
+    delay(7)
+    
+    #passwd
+    driver_1.find_element_by_xpath('//*[@id="mat-input-2"]').send_keys(passwds + uuid)
+    print("some password...")
+    delay(7)
+    
+    #confir-passwd
+    driver_1.find_element_by_xpath('//*[@id="mat-input-3"]').send_keys(passwds + uuid)
+    delay(7)
+
+    #uncheckbox
+    driver_1.find_element_by_xpath('//*[@id="opt-in-checkbox"]/label/div').click()
+    delay(7)
+
+    #signup
+    driver_1.find_element_by_xpath('//*[@id="continue-button"]').click()
+    print("finishing...")
+    delay(7)
+
+    #yes_continue
+    driver_1.find_element_by_xpath('//*[@id="mat-dialog-0"]/app-alert-dialog/div[3]/button[2]').click()
+    delay(15)
     print("registering...")
-    delay(5)
+    delay(1)
     print("")
     print("patient ya bosquu, waiting for the email")
     delay(40)
@@ -87,34 +111,6 @@ def auto():
     driver_1.find_element_by_xpath('//*[@id="verify-code-form"]/div[1]/div[1]/input').send_keys(link)
     delay(7)
     
-    
-    #name
-    driver_1.find_element_by_xpath('//*[@id="mat-input-2"]').send_keys(the_name)
-    print("some name...")
-    delay(7)
-    
-    #passwd
-    driver_1.find_element_by_xpath('//*[@id="mat-input-3"]').send_keys(passwds + uuid)
-    print("some password...")
-    delay(7)
-
-    #confir-passwd
-    driver_1.find_element_by_xpath('//*[@id="mat-input-4"]').send_keys(passwds + uuid)
-    delay(7)
-
-    #uncheckbox
-    driver_1.find_element_by_xpath('//*[@id="opt-in-checkbox"]/label/div').click()
-    delay(7)
-
-    #continu
-    driver_1.find_element_by_xpath('//*[@id="continue-button"]').click()
-    print("finishing...")
-    delay(7)
-
-    #yes_continue
-    driver_1.find_element_by_xpath('//*[@id="mat-dialog-0"]/app-alert-dialog/div[3]/button[2]').click()
-    delay(15)
-
     #finish
     driver_1.find_element_by_xpath('//*[@id="finish-button"]').click()
     print("")
